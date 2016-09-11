@@ -1,4 +1,5 @@
 # Triangle Adventures
+![Screenshot of Level 11](screenshot.png)
 
 ## Documentation
 See Google Docs below for instructions and level descriptions
