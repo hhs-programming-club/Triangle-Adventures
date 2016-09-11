@@ -5,10 +5,10 @@ public class Key extends Entity {
 
 	@Override
 	public void draw(Graphics2D g, int x, int y, int width, int height) {
-		Color t = g.getColor();
-		g.setColor(new Color(22, 160, 133));
+		Color prevColor = g.getColor();
+		g.setColor(new Color(255, 188, 0));
 		g.fillRect(x + width/4, y + height/4, width / 2, height /2);
-		g.setColor(t);
+		g.setColor(prevColor);
 	}
 
 }

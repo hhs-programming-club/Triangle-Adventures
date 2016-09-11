@@ -1,3 +1,4 @@
+import java.awt.Color;
 import java.awt.Graphics2D;
 import java.awt.Point;
 import java.awt.Polygon;
@@ -79,9 +80,12 @@ public class Player extends Entity {
 		final AffineTransform tx = g.getTransform();
 		g.translate(c.x, c.y);
 		g.rotate(-Math.toRadians(dir));
+		Color prevColor = g.getColor();
+		g.setColor(new Color(3, 231, 174));
 		g.fill(new Polygon(new int[]{p1.x, p2.x, p3.x},
 				new int[]{p1.y, p2.y, p3.y}, 3));
 		g.setTransform(tx);
+		g.setColor(prevColor);
 	}
 
 }
