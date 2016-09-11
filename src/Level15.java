@@ -1,9 +1,8 @@
 public class Level15 implements Level {
 
 	public void load(World world, Player player) {
-		
-		for (int i=0; i<8; i++) {
-			for (int j=0; j<5; j++) {
+		for (int i = 0; i < 8; i++) {
+			for (int j = 0; j < 5; j++) {
 				if (Math.random() < 0.8)
 					world.add(new Key(), i, j);
 				else
@@ -16,6 +15,11 @@ public class Level15 implements Level {
 		world.add(new Wall(), 6, 4);
 		world.add(new Wall(), 7, 4);
 		world.add(new Enemy(), 7, 5);	
+	}
+
+	@Override
+	public void runPlayerCommands(Player player) {
+		Gameplay.solveLevel15(player);		
 	}
 	
 }

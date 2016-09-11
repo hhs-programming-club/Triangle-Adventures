@@ -20,4 +20,9 @@ public class Level14 implements Level {
 		world.add(new Enemy(), ENEMY_X, ENEMY_Y);
 	}
 
+	@Override
+	public void runPlayerCommands(Player player) {
+		Gameplay.solveLevel14(player);
+	}
+
 }

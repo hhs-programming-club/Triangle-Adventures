@@ -9,7 +9,6 @@ public class Main {
 
 	private JFrame frame;
 	private JPanel cardPanel;
-	private SplashScreen splashPanel;
 
 	public Main() {
 	}
@@ -18,26 +17,16 @@ public class Main {
 		final World world = new World();
 		final Player player = new Player();
 		final Gui gui = new Gui(world);
-
-		// change the level number to change levels
-		int currentLevel = 10;
-		
+				
 		// change gui mode to DARK or LIGHT
 		gui.setMode(gui.DARK);
 
-		final Level level = Levels.levels[currentLevel - 1];
+		final Level level = Levels.levels[Gameplay.LEVEL_NUMBER - 1];
 		level.load(world, player);
 
 		frame = showGui(gui);
 		startLoop(world, gui);
-
-		commandPlayer(player);
-	}
-
-	public void commandPlayer(Player player) {
-		// Player commands go here
-		player.move();
-		player.turnRight();
+		level.runPlayerCommands(player);
 	}
 
 	@SuppressWarnings("serial")
@@ -51,11 +40,6 @@ public class Main {
 				setVisible(true);
 			}
 		};
-	}
-
-	public void changePanel(String panel) {
-		((CardLayout) cardPanel.getLayout()).next(cardPanel);
-		frame.requestFocus();
 	}
 
 	public void startLoop(final World world, final Gui gui) {

@@ -8,4 +8,9 @@ public class Level7 implements Level {
 		world.add(new Enemy(), (CODE == 1) ? 3 : 1, 3);
 	}
 
+	@Override
+	public void runPlayerCommands(Player player) {
+		Gameplay.solveLevel7(player);
+	}
+
 }

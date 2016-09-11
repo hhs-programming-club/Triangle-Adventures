@@ -9,4 +9,9 @@ public class Level5 implements Level {
 		world.add(new Enemy(), 3, 3);
 	}
 
+	@Override
+	public void runPlayerCommands(Player player) {
+		Gameplay.solveLevel5(player);
+	}
+
 }

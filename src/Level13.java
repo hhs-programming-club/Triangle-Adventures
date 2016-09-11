@@ -18,4 +18,9 @@ public class Level13 implements Level {
 		world.add(new Enemy(), 7, 5);
 	}
 
+	@Override
+	public void runPlayerCommands(Player player) {
+		Gameplay.solveLevel13(player);
+	}
+
 }

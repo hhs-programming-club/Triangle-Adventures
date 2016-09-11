@@ -8,4 +8,9 @@ public class Level8 implements Level {
 		world.add(new Enemy(), 3 + DISTANCE, 3);
 	}
 
+	@Override
+	public void runPlayerCommands(Player player) {
+		Gameplay.solveLevel8(player);
+	}
+
 }
