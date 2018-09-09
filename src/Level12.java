@@ -1,6 +1,6 @@
 public class Level12 implements Level {
 
-	public static final int N = (int) (Math.random() * 4) + 4;
+	public static final int N = (int) (Math.random() * 4) + 3;
 	boolean visited[][] = new boolean[8][8];
 	int dir = 0;
 	int[] dx = {1, 0, -1, 0};
